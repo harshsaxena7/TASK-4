@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat:wght@500&display=swap'); 
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+    }
+    form {
+        border: 1px solid black;
+        width: fit-content;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4rem 5rem 4rem 5rem;
+        margin-top: 6rem;
+    }
+    form input {
+        width: 15rem;
+        height: 2rem;
+        padding-left: 0.2rem;
+        border: none;
+        border-bottom: 1px solid black;
+        outline: none;
+    }
+    form h2 {
+        position: relative;
+        bottom: 1.6rem;
+    }
+    form input:focus {
+        border-bottom: 2px solid blue;
+    }
+    button {
+        border: none;
+        font-weight: 600;
+        padding: 0.6rem 1rem 0.6rem 1rem;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <!--Opening the ejs tags for including header file-->
+<%- include("./partials/header") %>
+<!-- Creating a form where action will 
+    be on "/" and the method will be "POST" -->
+<form action="/" method="POST">
+    <!-- Creating the parameter Username as type= "text"-->
+    <!-- <label>Username: </label> -->
+    <h2>Enter Your Details</h2>
+    <input type="text" placeholder="Full Name" name="username" autocomplete="off" required autofocus><br><br>
+    <!-- Creating the parameter Email as type= "text"-->
+    <!-- <label>Email: </label> -->
+    <input type="email" placeholder="Mail Address" name="email" autocomplete="off" required><br><br>
+    <!-- Creating the submit button -->
+    
+    <!-- <div id="password">  -->
+        <input type="password" placeholder="Password" name="password" autocomplete="off" required><br><br>
+    <!-- </div>  -->
+    <button>Submit</button>
+</form>
+
+</body>
+</html>
